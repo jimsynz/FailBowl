@@ -1,3 +1,3 @@
-module HalfFull
+module FailBowl
   VERSION = "0.0.1"
 end

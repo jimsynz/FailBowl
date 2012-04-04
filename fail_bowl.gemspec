@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/half_full/version', __FILE__)
+require File.expand_path('../lib/fail_bowl/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["James Harton"]
@@ -11,10 +11,11 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "half_full"
+  gem.name          = "fail_bowl"
   gem.require_paths = ["lib"]
-  gem.version       = HalfFull::VERSION
+  gem.version       = FailBowl::VERSION
 
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'guard-rspec'
+  gem.add_development_dependency 'cucumber'
 end

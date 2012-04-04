@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in half_full.gemspec
+# Specify your gem's dependencies in fail_bowl.gemspec
 gemspec
