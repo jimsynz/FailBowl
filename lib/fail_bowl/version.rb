@@ -1,3 +1,3 @@
 module FailBowl
-  VERSION = "0.0.1"
+  VERSION = "2012.4.5"
 end

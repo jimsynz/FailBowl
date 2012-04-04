@@ -4,9 +4,9 @@ require File.expand_path('../lib/fail_bowl/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["James Harton"]
   gem.email         = ["jamesotron@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A small gem which provides tracing information about stack overflows.}
+  gem.summary       = %q{Trace SystemStackError exceptions.}
+  gem.homepage      = "https://github.com/jamesotron/FailBowl"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
