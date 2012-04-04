@@ -36,4 +36,17 @@ describe FailBowl::OverflowExtension do
     end
   end
 
+  context '.hotlist' do
+    it 'returns a sorted list of method call frequency' do
+      klass = Class.new
+      base_event = FailBowl::Tracer::Event.new('c-call', '(irb)', 1, :foo, Object.new, klass)
+      hot_event = base_event.dup.tap { |e| e.id = :hot }
+      warm_event = base_event.dup.tap { |e| e.id = :warm }
+      cold_event = base_event.dup.tap { |e| e.id = :cold }
+      tracer.stub(:to_a) { [ hot_event, cold_event, warm_event, hot_event.dup, warm_event.dup, hot_event.dup ] }
+      overflow.hotlist.first.should == { "#{klass}.hot" => 3 }
+      overflow.hotlist.last.should == { "#{klass}.cold" => 1 }
+    end
+  end
+
 end
